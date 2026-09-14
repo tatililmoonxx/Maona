@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+            --very-ligth-pink: #c7c7c7;
+            --text-imput-field: #f7f7f7;
+            --hostpital-green: #acd982;
+            --white: #ffffff;
+            --black: #000000;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+        }
+        body{
+            font-family: "Quicksand", sans-serif;
+            margin: 0;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none; 
+        }
+
+        .title{
+            font-size:var(--lg) ;
+            margin-bottom: 12px;
+            text-align: center; 
+        }
+        .subtitle{
+            color: var(--very-ligth-pink);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input{
+            background-color: var(--text-imput-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .primary-button{
+            background-color: var(--hostpital-green);
+            border: none;
+            border-radius: 8px;
+            color:var(--white);
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--hostpital-green);
+            color: var(--hostpital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            height: 52px;
+            box-sizing: border-box;
+        }
+        .forgot-password{
+            color: var(--hostpital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-top: 0;
+            margin-bottom: 54px;
+            font-weight: 500;
+        }
+        .forgot-password a{
+            color: var(--hostpital-green);
+            text-decoration: none;
+        }
+
+        
+        @media (max-width: 640px){
+            .logo{
+                display: block; 
+                margin-top: 20px;
+            }
+            .form-container{
+                height: 100vh; 
+            }
+            .secondary-button{
+                margin-bottom: 30px; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <div class="login">
+    <div class="form-container">
+        <img src="./Logo.jpeg" alt="ImagenNegocio" class="logo">
+        
+        <form action="/" class="form">
+            <label for="email" class="label">Email address</label>
+            <input type="email" class="input" id="email" placeholder="camilayokoo@gmail.com">
+
+            <label for="password" class="label">Password</label>
+            <input type="password" class="input" id="password" placeholder="*************">
+
+            <input type="submit" value="Log in" class="primary-button login-button">
+
+            <p class="forgot-password">
+                <a href="/">Forgot my password</a>
+            </p>
+        </form>
+
+        <button type="button" class="secondary-button sign-up">Sign up</button>
+    </div>
+
+   </div> 
+</body>
+</html>
